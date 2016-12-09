@@ -1,0 +1,89 @@
+$def with (todos,results)
+<html>
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
+    <title>接口监控平台</title>
+    <style>
+        .Fail {
+            color: red;
+        }
+    </style>
+    <script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;œ
+      (function(){
+        _vds.push(['setAccountId', 'a8c1b7c4ef8975c0']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+</script>
+</head>
+<h4><a href="http://at.test.xxtao.com/short">查看短链接测试情况</a> /<a href="http://at.test.xxtao.com/wph">查看API_wph测试情况</a></h4>
+<h4><a href="http://pages.wph.xxtao.com">返回需求主站</a></h4>
+<body>
+<form method="post" action="/">
+<p><input type="text" name="title" value="xxtao/wph"/> <input type="submit" value="again" /></p>
+
+</form>
+<h4>执行结果：<font color="#003399">Total:$results[0]</font>||<font color="#00ff00">Pass:$results[1]</font>||<font color="#FF0000">Fail:$results[2]</font> </h4>
+
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>api</th>
+        <th>case_name</th>
+        <th>result</th>
+        <th>status</th>
+        <th>response</th>
+        <th>comment</th>
+        <th>url_target</th>
+        <th>type</th>
+        <th>uptm</th>
+    </tr>
+    </thead>
+        $for todo in todos:
+        <tbody>
+        <tr>
+        <td>
+
+        </td>
+        <td>
+            <p class="$todo.result">$todo.if_name</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.case_name</p>
+        </td>
+
+        <td>
+            <p class="$todo.result">$todo.result</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.status</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.response</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.comment</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.url_target</p>
+        </td>
+        <td>
+            <p class="$todo.result">$todo.type</p>
+        </td>
+        <td>
+             <p class="$todo.result">$todo.uptm</p>
+        </td>
+        </tr>
+        </tbody>
+    </table>
+</body>
+</html>

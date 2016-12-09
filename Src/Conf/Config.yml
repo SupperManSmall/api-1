@@ -1,0 +1,69 @@
+---
+#url  : ApiMethod.py/UiMethod.py中默认顺序是api、xxtao、wph，顺序不能发生变化
+url_off           :           http://api.xxtao.com, http://m.xxtao.com, http://www.xxtao.com
+url_on            :           http://api.wanpinghui.com, http://m.wanpinghui.com, http://www.wanpinghui.com
+
+path              :
+    test_report              :    /Output/TestReport/       #测试报告生成路径
+    send_report              :    /Output/SendReport/       #测试报告发送路径
+    test_dir                 :    /Output/Testdir/          #需要执行测试的文件路径
+    TrueScreenshot           :    /Output/Screenshot/Pass/  #存放截图路径
+    FalseScreenshot          :    /Output/Screenshot/Fail/
+    global_dir               :    /Output/Global/           #全局参数存放路径
+log               :
+    path_mac                 :    /Output/Log/
+    path_win                 :    E:\Jenkins\workspace\UItest\log\
+
+cookfile_name     :
+    supplier_wph                   :        Cookies_saved_supplier_wph.txt
+    client_wph                     :        Cookies_saved_client_wph.txt
+    supplier_xxtao                 :        Cookies_saved_supplier_xxtao.txt
+    client_xxtao                   :        Cookies_saved_client_xxtao.txt
+
+local_mysql       :
+    # 本地数据库配置信息
+    ip                       :     '127.0.0.1'
+    username                 :     'root'
+    password                 :     '123456'
+    database                 :     'god'
+xxtao_mysql       :
+    # xxtao的数据库连接信息
+    ip                       :     '127.0.0.1'
+    username                 :     'root'
+    password                 :     'wphx2016'
+    database                 :     'god'
+
+short_url         :
+    # short_url 短信连接信息
+    ip                       :     '192.168.0.1'
+    username                 :     'root'
+    password                 :     'wph2016'
+    database                 :     'db_short_url'
+
+email             :
+    # 配置邮件基本信息
+    # qq邮箱配置
+#    mail_host                :    smtp.qq.com
+#    mail_user                :    17820586@qq.com
+#    mail_pass                :    ******
+#    mailcc                   :    mailcc
+#    mailbcc                  :    mailbcc
+    # 阿里云邮箱配置
+#    mail_host                :    smtp.mxhichina.com
+#    mail_user                :    max@wanpinghui.com
+#    mail_pass                :    ******
+
+    # 163邮箱配置
+    mail_host                :    smtp.163.com
+    mail_user                :    18303@163.com
+    mail_pass                :    123456
+
+
+# 配置群发成员列表
+email_receiver_wph    :        [maxuechao@wanpinghui.com,songerwei@wanpinghui.com]
+email_receiver_xxtao  :        [maxuechao@wanpinghui.com, songerwei@wanpinghui.com]
+
+ApiCase           :
+    a_client                 :    /Src/TestCase/ApiCase/a_client/
+    b_supplier               :    /Src/TestCase/ApiCase/b_supplier/
+...

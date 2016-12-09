@@ -1,0 +1,90 @@
+$def with (todos, results)
+<html>
+<head>
+    <meta http-equiv=”Content-Type” content=”text/html; charset=utf-8″ />
+    <title>短链接监控平台</title>
+    <style>
+        .Fail {
+            color: red;
+        }
+    </style>
+    <script type='text/javascript'>
+      var _vds = _vds || [];
+      window._vds = _vds;
+      (function(){
+        _vds.push(['setAccountId', 'a8c1b7c4ef8975c0']);
+        (function() {
+          var vds = document.createElement('script');
+          vds.type='text/javascript';
+          vds.async = true;
+          vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+          var s = document.getElementsByTagName('script')[0];
+          s.parentNode.insertBefore(vds, s);
+        })();
+      })();
+</script>
+</head>
+<body>
+<h4><a href="http://at.test.xxtao.com/">查看接口测试情况</a> /<a href="http://at.test.xxtao.com/short">查看XXTAO短链接测试情况</a></h4>
+<h4><a href="http://pages.wph.xxtao.com">返回需求主站</a></h4>
+<!--<form method="post" action="/">-->
+<!--<p><input type="text" name="title" value="xxtao/wph" /> <input type="submit" value="run" /></p>-->
+<!--</form>-->
+<h4>最近$results[0]条用例执行结果：<font color="#003399">Total:$results[0]</font>||<font color="#00ff00">Pass:$results[1]</font>||<font color="#FF0000">Fail:$results[2]</font> </h4>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>case_name </th>
+        <th>short_url_id </th>
+        <th>short_tag</th>
+        <th>result</th>
+        <th>status</th>
+        <th>url_target</th>
+        <th>comment</th>
+        <th>type</th>
+        <th>uptm</th>
+    </tr>
+    </thead>
+        $for todo in todos:
+        <tbody>
+        <tr>
+            <td>
+                <p class="$todo.result">$todo.id</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.case_name</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.short_url_id</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.short_tag</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.result</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.status</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.url_target</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.comment</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.type</p>
+            </td>
+            <td>
+                <p class="$todo.result">$todo.uptm</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+
+</body>
+
+</html>

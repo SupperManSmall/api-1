@@ -1,0 +1,11 @@
+---
+a_client        :
+#接口名称
+    a05                         :     test_a_05_userLogout.py
+    a07                         :     test_a_07_userCheckphone.py
+    a08                         :     test_a_08_cityList.py
+
+b_supplier      :
+    b45                         :     test_b_45_confDict.py
+
+...

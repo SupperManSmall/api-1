@@ -1,0 +1,48 @@
+---
+
+Environment       :
+#    Local : 本地环境 || Production  : 部署环境
+    environment             :    Local
+#    environment             :    Production
+
+Production        :         &id001
+    log                     : !!str warning
+    brower                  : !!str phantomjs
+    report                  : !!str true
+    del_report              : !!str true
+    backup                  : !!str false
+    Main                    : !!str ui
+    email                   : !!str misc
+    send_who                : !!str Null
+    url_target              : !!str wanpinghui.com
+    run_case                : !!str all
+    all_case_name           : !!str api
+    run_case_by_filename    : !!str ''
+
+Local             :
+    <<                      :       *id001
+    log                     :       d
+    brower                  :       p
+    report                  :       f
+    del_report              :       t
+    Main                    :       a
+    email                   :       f
+    url_target              :       xxtao.com
+    run_case                :       all
+    all_case_name           :       ui
+
+value_all         :
+    level_value             :       [i, info, d, debug, e, error, w, warning, notset]
+    brower_value            :       [c, chrome, f, firfox, p, phantomjs]
+    report_value            :       [t, 'true', f, 'false']
+    report_value            :       [t, 'true', f, 'false']
+    del_value               :       [t, 'true', f, 'false']
+    backup_value            :       [t, 'true', f, 'false']
+    Main_value              :       [u, ui, a, api, w, whole, e, excel]
+    email_value             :       [t, 'true', f, false, m, misc]
+    url_value               :       [wanpinghui.com, xxtao.com, wanpinghui, xxtao]
+    send_email_value        :       [maxuechao@wanpinghui.com,59763908@qq.com,jiahongming@xxtao.com,325005569@qq.com,xuyongjun@wanpinghui.com,3252667@qq.com,jiahongming@xxtao.com,zhaoni@wanpinghui.com,gaoyue@wanpinghui.com,821484487@qq.com,yangpeng@wanpinghui.com,2543929751@qq.com,huhao@wanpinghui.com,906566742@qq.com,zhaoyong@wanpinghui.com,113256262@qq.com,songerwei@wanpinghui.com]
+    case_whitch_value       :       [a, api, u, ui]
+    ParameterSummary        :       [-h, -l, -b, -r, -d, -u, -m, -e, -s, -t, -c, -a, -n]
+
+...
