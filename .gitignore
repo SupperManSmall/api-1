@@ -1,0 +1,15 @@
+*.log
+*.swp
+*.swo
+**/*.xml
+.idea/*
+*.pyc
+*.bak
+bin
+Testdir
+Screenshot
+SendReport
+Log
+TestReport
+Output
+test.py
